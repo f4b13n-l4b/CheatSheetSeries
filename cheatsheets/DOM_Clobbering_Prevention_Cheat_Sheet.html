@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -474,6 +474,34 @@
   
   
     <li class="md-nav__item">
+      <a href="AI-Powered_Advertising_Systems_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Powered Advertising Systems Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="AI_Agent_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -510,6 +538,34 @@
     
   
     AJAX Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AML_Sanctions_AI_Agent_Payments_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AML Sanctions AI Agent Payments
   
 
     
@@ -650,6 +706,34 @@
     
   
     Authorization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Regression_Testing_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authorization Regression Testing
   
 
     
@@ -2170,14 +2254,14 @@
   
   
     <li class="md-nav__item">
-      <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
+      <a href="JSON_Web_Token_Cheat_Sheet.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    JSON Web Token for Java
+    JSON Web Token
   
 
     
@@ -2682,6 +2766,34 @@
     
   
     Network Segmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Nextjs_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nextjs Security
   
 
     
@@ -4437,7 +4549,7 @@
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">x</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>will lead to browsers creating references to that form element with the attribute <code>x</code> of <code>window</code> and <code>document</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">obj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">obj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'x'</span><span class="p">);</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">obj2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">obj3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">obj4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
@@ -4449,9 +4561,9 @@
 </code></pre></div>
 <p>When accessing an attribute of <code>window</code> and <code>document</code> objects, named HTML element references come before lookups of built-in APIs and other attributes on <code>window</code> and <code>document</code> that developers have defined, also known as <a href="https://html.spec.whatwg.org/multipage/nav-history-apis.html#named-access-on-the-window-object">named property accesses</a>. Developers unaware of such behavior may use the content of window/document attributes for sensitive operations, such as URLs for fetching remote content, and attackers can exploit it by injecting markups with colliding names. Similarly to custom attributes/variables, built-in browser APIs may be overshadowed by DOM Clobbering.</p>
 <p>If attackers are able to inject (non-script) HTML markup in the DOM tree,
-it can change the value of a variable that the web application relies on due to named property accesses, causing it to malfunction, expose sensitive data, or execute attacker-controlled scripts. DOM Clobbering works by taking advantage of this (legacy) behaviour, causing a namespace collision between the execution environment (i.e., <code>window</code> and <code>document</code> objects), and JavaScript code.</p>
+it can change the value of a variable that the web application relies on due to named property accesses, causing it to malfunction, expose sensitive data, or execute attacker-controlled scripts. DOM Clobbering works by taking advantage of this (legacy) behavior, causing a namespace collision between the execution environment (i.e., <code>window</code> and <code>document</code> objects), and JavaScript code.</p>
 <h3 id="example-attack-1">Example Attack 1<a class="headerlink" href="#example-attack-1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">redirectTo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">redirectTo</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;/profile/&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">redirectTo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">redirectTo</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">'/profile/'</span><span class="p">;</span>
 <span class="nx">location</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">redirectTo</span><span class="p">);</span>
 </code></pre></div>
 <p>The attacker can:</p>
@@ -4460,8 +4572,8 @@ it can change the value of a variable that the web application relies on due to 
 <li>inject the markup <code>&lt;a id=redirectTo href='phishing.com'</code> and obtain open redirect.</li>
 </ul>
 <h3 id="example-attack-2">Example Attack 2<a class="headerlink" href="#example-attack-2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;script.js&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">url</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">'script.js'</span><span class="p">;</span>
 <span class="nx">s</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">src</span><span class="p">;</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
 </code></pre></div>
@@ -4563,8 +4675,8 @@ it can change the value of a variable that the web application relies on due to 
 <p>The new browser-built-in <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Sanitizer_API">Sanitizer API</a> does not prevent DOM Clobbering it its <a href="https://wicg.github.io/sanitizer-api/#dom-clobbering">default setting</a>, but can be configured to remove named properties:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">sanitizerInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Sanitizer</span><span class="p">({</span>
 <span class="w">  </span><span class="nx">blockAttributes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">elements</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">elements</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="s1">'name'</span><span class="o">:</span><span class="w"> </span><span class="s1">'id'</span><span class="p">,</span><span class="w"> </span><span class="nx">elements</span><span class="o">:</span><span class="w"> </span><span class="s1">'*'</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s1">'name'</span><span class="o">:</span><span class="w"> </span><span class="s1">'name'</span><span class="p">,</span><span class="w"> </span><span class="nx">elements</span><span class="o">:</span><span class="w"> </span><span class="s1">'*'</span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">});</span>
 <span class="nx">containerDOMElement</span><span class="p">.</span><span class="nx">setHTML</span><span class="p">(</span><span class="nx">input</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">sanitizer</span><span class="o">:</span><span class="w"> </span><span class="nx">sanitizerInstance</span><span class="p">});</span>
@@ -4668,7 +4780,7 @@ it can change the value of a variable that the web application relies on due to 
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

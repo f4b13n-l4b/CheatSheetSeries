@@ -16,14 +16,14 @@
         <link rel="prev" href="Authentication_Cheat_Sheet.html">
       
       
-        <link rel="next" href="Authorization_Testing_Automation_Cheat_Sheet.html">
+        <link rel="next" href="Authorization_Regression_Testing_Cheat_Sheet.html">
       
       
         
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -474,6 +474,34 @@
   
   
     <li class="md-nav__item">
+      <a href="AI-Powered_Advertising_Systems_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Powered Advertising Systems Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="AI_Agent_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -510,6 +538,34 @@
     
   
     AJAX Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AML_Sanctions_AI_Agent_Payments_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AML Sanctions AI Agent Payments
   
 
     
@@ -926,6 +982,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Regression_Testing_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authorization Regression Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2114,14 +2198,14 @@
   
   
     <li class="md-nav__item">
-      <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
+      <a href="JSON_Web_Token_Cheat_Sheet.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    JSON Web Token for Java
+    JSON Web Token
   
 
     
@@ -2626,6 +2710,34 @@
     
   
     Network Segmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Nextjs_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nextjs Security
   
 
     
@@ -4397,7 +4509,7 @@
 <p>In the example above, the lookup ID was not only exposed to the user and readily tampered with, but also appears to have been a fairly predictable, perhaps sequential, value.  While one can use various techniques to mask or randomize these IDs and make them hard to guess, such an approach is generally not sufficient by itself. A user should not be able to access a resource they do not have permissions simply because they are able to guess and manipulate that object's identifier in a query param or elsewhere. Rather than relying on some form of security through obscurity, the focus should be on controlling access to the underlying objects and/or the identifiers themselves. Recommended mitigations for this weakness include the following:</p>
 <ul>
 <li>Avoid exposing identifiers to the user when possible. For example it should be possible to retrieve some objects, such as account details,  based solely on currently authenticated user's identity and attributes (e.g. through information contained in a securely implemented JSON Web Token (JWT) or server-side session).</li>
-<li>Implement user/session specific indirect references using a tool such as <a href="https://owasp.org/www-project-enterprise-security-api/">OWASP ESAPI</a> (see <a href="https://wiki.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References">OWASP 2013 Top 10 - A4 Insecure Direct Object References</a>)</li>
+<li>Implement user/session specific indirect references using a tool such as <a href="https://owasp.org/www-project-enterprise-security-api/">OWASP ESAPI</a> (see <a href="https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/">OWASP Top 10:2025 A01 Broken Access Control</a> and the <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">Insecure Direct Object Reference Prevention Cheat Sheet</a>)</li>
 <li>Perform access control checks on <em>every</em> request for the <em>specific</em> object or functionality being accessed. Just because a user has access to an object of a particular type does not mean they should have access to every object of that particular type.</li>
 </ul>
 <h3 id="enforce-authorization-checks-on-static-resources">Enforce Authorization Checks on Static Resources<a class="headerlink" href="#enforce-authorization-checks-on-static-resources" title="Permanent link">&para;</a></h3>
@@ -4412,7 +4524,7 @@
 <h3 id="exit-safely-when-authorization-checks-fail">Exit Safely when Authorization Checks Fail<a class="headerlink" href="#exit-safely-when-authorization-checks-fail" title="Permanent link">&para;</a></h3>
 <p>Failed access control checks are a normal occurrence in a secured application; consequently, developers must plan for such failures and handle them securely. Improper handling of such failures can lead to the application being left in an unpredictable state (<a href="https://cwe.mitre.org/data/definitions/280.html">CWE-280: Improper Handling of Insufficient Permissions or Privileges</a>). Specific recommendations include the following:</p>
 <ul>
-<li>Ensure all exception and failed access control checks are handled no matter how unlikely they seem (<a href="https://owasp.org/www-project-proactive-controls/v3/en/c10-errors-exceptions.html">OWASP Top Ten Proactive Controls C10: Handle all errors and exceptions</a>). This does not mean that an application should always try to "correct" for a failed check; oftentimes a simple message or HTTP status code is all that is required.</li>
+<li>Ensure all exception and failed access control checks are handled no matter how unlikely they seem (<a href="https://owasp.org/www-project-proactive-controls/v3/en/c10-errors-exceptions">OWASP Top Ten Proactive Controls C10: Handle all errors and exceptions</a>). This does not mean that an application should always try to "correct" for a failed check; oftentimes a simple message or HTTP status code is all that is required.</li>
 <li>Centralize the logic for handling failed access control checks.</li>
 <li>Verify the handling of exception and authorization failures. Ensure that such failures, no matter how unlikely, do not put the software into an unstable state that could lead to authorization bypass.</li>
 <li>Ensure sensitive information, such as system logs or debugging output, is not exposed in error messages. Misconfigured error messages can increase the attack surface of your application. (<a href="https://cwe.mitre.org/data/definitions/209.html">CWE-209: Generation of Error Message Containing Sensitive Information</a>)</li>
@@ -4420,7 +4532,7 @@
 <h3 id="implement-appropriate-logging">Implement Appropriate Logging<a class="headerlink" href="#implement-appropriate-logging" title="Permanent link">&para;</a></h3>
 <p>Logging is one of the most important detective controls in application security; insufficient logging and monitoring is recognized as among  the most critical security risks in <a href="https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/">OWASP's Top Ten 2021</a>. Appropriate logs can not only detect malicious activity, but are also invaluable resources in post-incident investigations, can be used to troubleshoot access control and other security related problems, and are useful in security auditing. Though easy to overlook during the initial design and requirements phase, logging is an important component of holistic application security and must be incorporated into all phases of the SDLC. Recommendations for logging include the following:</p>
 <ul>
-<li>Log using consistent, well-defined formats that can be readily parsed for analysis. According to <a href="https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html">OWASP Top Ten Proactive Controls C9</a>, <a href="https://logging.apache.org/">Apache Logging Services</a> is one example of a project that provides support for numerous languages and platforms</li>
+<li>Log using consistent, well-defined formats that can be readily parsed for analysis. According to <a href="https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging">OWASP Top Ten Proactive Controls C9</a>, <a href="https://logging.apache.org/">Apache Logging Services</a> is one example of a project that provides support for numerous languages and platforms</li>
 <li>Carefully determine the amount of information to log. This should be determined according to the specific application environment and requirements. Both too much and too little logging may be considered security weaknesses (see <a href="https://cwe.mitre.org/data/definitions/778.html">CWE-778</a> and <a href="https://cwe.mitre.org/data/definitions/779.html">CWE-779</a>). Too little logging can result in malicious activity going undetected and greatly reduce the effectiveness of post-incident analysis. Too much logging not only can strain resources and lead to excessive false positives, but may also result in sensitive data being needlessly logged.</li>
 <li>Ensure clocks and timezones are synchronized across systems. Accuracy is crucial in piecing together the sequence of an attack during and after incident response.</li>
 <li>Consider incorporating application logs into a centralized log server or SIEM.</li>
@@ -4531,7 +4643,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

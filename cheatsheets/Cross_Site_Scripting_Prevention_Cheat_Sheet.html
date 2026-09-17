@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -474,6 +474,34 @@
   
   
     <li class="md-nav__item">
+      <a href="AI-Powered_Advertising_Systems_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Powered Advertising Systems Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="AI_Agent_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -510,6 +538,34 @@
     
   
     AJAX Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AML_Sanctions_AI_Agent_Payments_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AML Sanctions AI Agent Payments
   
 
     
@@ -650,6 +706,34 @@
     
   
     Authorization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Regression_Testing_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authorization Regression Testing
   
 
     
@@ -2226,14 +2310,14 @@
   
   
     <li class="md-nav__item">
-      <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
+      <a href="JSON_Web_Token_Cheat_Sheet.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    JSON Web Token for Java
+    JSON Web Token
   
 
     
@@ -2738,6 +2822,34 @@
     
   
     Network Segmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Nextjs_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nextjs Security
   
 
     
@@ -4540,13 +4652,13 @@
 <h1 id="cross-site-scripting-prevention-cheat-sheet">Cross Site Scripting Prevention Cheat Sheet<a class="headerlink" href="#cross-site-scripting-prevention-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>This cheat sheet helps developers prevent XSS vulnerabilities.</p>
-<p>Cross-Site Scripting (XSS) is a misnomer. Originally this term was derived from early versions of the attack that were primarily focused on stealing data cross-site. Since then, the term has widened to include injection of basically any content. XSS attacks are serious and can lead to account impersonation, observing user behaviour, loading external content, stealing sensitive data, and more.</p>
+<p>Cross-Site Scripting (XSS) is a misnomer. Originally this term was derived from early versions of the attack that were primarily focused on stealing data cross-site. Since then, the term has widened to include injection of basically any content. XSS attacks are serious and can lead to account impersonation, observing user behavior, loading external content, stealing sensitive data, and more.</p>
 <p><strong>This cheatsheet contains techniques to prevent or limit the impact of XSS. Since no single technique will solve XSS, using the right combination of defensive techniques will be necessary to prevent XSS.</strong></p>
 <h2 id="framework-security">Framework Security<a class="headerlink" href="#framework-security" title="Permanent link">&para;</a></h2>
 <p>Fortunately, applications built with modern web frameworks have fewer XSS bugs, because these frameworks steer developers towards good security practices and help mitigate XSS by using templating, auto-escaping, and more. However, developers need to know that problems can occur if frameworks are used insecurely, such as:</p>
 <ul>
 <li><em>escape hatches</em> that frameworks use to directly manipulate the DOM</li>
-<li>React’s <code>dangerouslySetInnerHTML</code> without sanitising the HTML</li>
+<li>React’s <code>dangerouslySetInnerHTML</code> without sanitizing the HTML</li>
 <li>React cannot handle <code>javascript:</code> or <code>data:</code> URLs without specialized validation</li>
 <li>Angular’s <code>bypassSecurityTrustAs*</code> functions</li>
 <li>Lit's <code>unsafeHTML</code> function</li>
@@ -4557,7 +4669,7 @@
 </ul>
 <p>When you use a modern web framework, you need to know how your framework prevents XSS and where it has gaps. There will be times where you need to do something outside the protection provided by your framework, which means that Output Encoding and HTML Sanitization can be critical. OWASP will be producing framework specific cheatsheets for React, Vue, and Angular.</p>
 <h2 id="xss-defense-philosophy">XSS Defense Philosophy<a class="headerlink" href="#xss-defense-philosophy" title="Permanent link">&para;</a></h2>
-<p>In order for an XSS attack to be successful, an attacker must be able to insert and execute malicious content in a webpage. Thus, all variables in a web application needs to be protected. Ensuring that <strong>all variables</strong> go through validation and are then escaped or sanitized is known as <strong>perfect injection resistance</strong>. Any variable that does not go through this process is a potential weakness. Frameworks make it easy to ensure variables are correctly validated and escaped or sanitised.</p>
+<p>In order for an XSS attack to be successful, an attacker must be able to insert and execute malicious content in a webpage. Thus, all variables in a web application needs to be protected. Ensuring that <strong>all variables</strong> go through validation and are then escaped or sanitized is known as <strong>perfect injection resistance</strong>. Any variable that does not go through this process is a potential weakness. Frameworks make it easy to ensure variables are correctly validated and escaped or sanitized.</p>
 <p>However, no framework is perfect and security gaps still exist in popular frameworks like React and Angular. Output encoding and HTML sanitization help address those gaps.</p>
 <h2 id="output-encoding">Output Encoding<a class="headerlink" href="#output-encoding" title="Permanent link">&para;</a></h2>
 <p>When you need to safely display data exactly as a user types it in, output encoding is recommended. Variables should not be interpreted as code instead of text. This section covers each form of output encoding, where to use it, and when you should not use dynamic variables at all.</p>
@@ -4577,12 +4689,12 @@
 <div class="highlight"><pre><span></span><code><span class="err">&amp;</span>    <span class="ni">&amp;amp;</span>
 <span class="err">&lt;</span>    <span class="ni">&amp;lt;</span>
 &gt;    <span class="ni">&amp;gt;</span>
-&quot;    <span class="ni">&amp;quot;</span>
-&#39;    <span class="ni">&amp;#x27;</span>
+"    <span class="ni">&amp;quot;</span>
+'    <span class="ni">&amp;#x27;</span>
 </code></pre></div>
 <h3 id="output-encoding-for-html-attribute-contexts">Output Encoding for “HTML Attribute Contexts”<a class="headerlink" href="#output-encoding-for-html-attribute-contexts" title="Permanent link">&para;</a></h3>
 <p>“HTML Attribute Contexts” occur when a variable is placed in an HTML attribute value. You may want to do this to change a hyperlink, hide an element, add alt-text for an image, or change inline CSS styles. You should apply HTML attribute encoding to variables being placed in most HTML attributes. A list of safe HTML attributes is provided in the <strong>Safe Sinks</strong> section.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">attr</span><span class="o">=</span><span class="s">&quot;$varUnsafe&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">attr</span><span class="o">=</span><span class="s">"$varUnsafe"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">attr</span><span class="o">=</span><span class="s">”*x”</span> <span class="na">onblur</span><span class="o">=</span><span class="s">”alert(1)*”</span><span class="p">&gt;</span> // Example Attack
 </code></pre></div>
 <p><strong>It’s critical to use quotation marks like <code>"</code> or <code>'</code> to surround your variables.</strong> Quoting makes it difficult to change the context a variable operates in, which helps prevent XSS. Quoting also significantly reduces the characterset that you need to encode, making your application more reliable and the encoding easier to implement.</p>
@@ -4591,9 +4703,9 @@
 <p>“JavaScript Contexts” refers to the situation where variables are placed into inline JavaScript and then embedded in an HTML document. This situation commonly occurs in programs that heavily use custom JavaScript that is embedded in their web pages.</p>
 <p>However, the only ‘safe’ location for placing variables in JavaScript is inside a “quoted data value”. All other contexts are unsafe and you should not place variable data in them.</p>
 <p>Examples of “Quoted Data Values”</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="err">&#39;</span><span class="nx">$varUnsafe</span><span class="err">’</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="err">'</span><span class="nx">$varUnsafe</span><span class="err">’</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">x</span><span class="o">=</span><span class="err">’</span><span class="nx">$varUnsafe</span><span class="err">’</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">onmouseover</span><span class="o">=</span><span class="s">&quot;&#39;$varUnsafe&#39;&quot;</span><span class="err">&lt;/</span><span class="na">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">onmouseover</span><span class="o">=</span><span class="s">"'$varUnsafe'"</span><span class="err">&lt;/</span><span class="na">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Encode all characters using the <code>\xHH</code> format. Encoding libraries often have a <code>EncodeForJavaScript</code> or similar to support this function.</p>
 <p>Please look at the <a href="https://owasp.org/www-project-java-encoder/">OWASP Java Encoder JavaScript encoding examples</a> for examples of proper JavaScript use that requires minimal encoding.</p>
@@ -4601,8 +4713,8 @@
 <h3 id="output-encoding-for-css-contexts">Output Encoding for “CSS Contexts”<a class="headerlink" href="#output-encoding-for-css-contexts" title="Permanent link">&para;</a></h3>
 <p>“CSS Contexts” refer to variables placed into inline CSS, which is common when developers want their users to customize the look and feel of their webpages. Since CSS is surprisingly powerful, it has been used for many types of attacks. <strong>Variables should only be placed in a CSS property value. Other “CSS Contexts” are unsafe and you should not place variable data in them.</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"> </span><span class="nt">selector</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">$</span><span class="n">varUnsafe</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"> </span><span class="nt">selector</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$varUnsafe&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;property : $varUnsafe&quot;</span><span class="p">&gt;</span>Oh no<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"> </span><span class="nt">selector</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$varUnsafe"</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">"property : $varUnsafe"</span><span class="p">&gt;</span>Oh no<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>If you're using JavaScript to change a CSS property, look into using
 <code>style.property = x</code>.
@@ -4610,13 +4722,13 @@ This is a <strong>Safe Sink</strong> and will automatically CSS encode data in i
 <p>When inserting variables into CSS properties, ensure the data is properly encoded and sanitized to prevent injection attacks. Avoid placing variables directly into selectors or other CSS contexts.</p>
 <h3 id="output-encoding-for-url-contexts">Output Encoding for “URL Contexts”<a class="headerlink" href="#output-encoding-for-url-contexts" title="Permanent link">&para;</a></h3>
 <p>“URL Contexts” refer to variables placed into a URL. Most commonly, a developer will add a parameter or URL fragment to a URL base that is then displayed or used in some operation. Use URL Encoding for these scenarios.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.owasp.org?test=$varUnsafe&quot;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span> <span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"http://www.owasp.org?test=$varUnsafe"</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span> <span class="p">&gt;</span>
 </code></pre></div>
 <p>Encode all characters with the <code>%HH</code> encoding format. Make sure any attributes are fully quoted, same as JS and CSS.</p>
 <h4 id="common-mistake">Common Mistake<a class="headerlink" href="#common-mistake" title="Permanent link">&para;</a></h4>
 <p>There will be situations where you use a URL in different contexts. The most common one would be adding it to an <code>href</code> or <code>src</code> attribute of an <code>&lt;a&gt;</code> tag. In these scenarios, you should do URL encoding, followed by HTML attribute encoding.</p>
-<div class="highlight"><pre><span></span><code>url = &quot;https://site.com?data=&quot; + urlencode(parameter)
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;attributeEncode(url)&#39;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code>url = "https://site.com?data=" + urlencode(parameter)
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">'attributeEncode(url)'</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>If you're using JavaScript to construct a URL Query Value, look into using <code>window.encodeURIComponent(x)</code>. This is a <strong>Safe Sink</strong> and will automatically URL encode data in it.</p>
 <h3 id="dangerous-contexts">Dangerous Contexts<a class="headerlink" href="#dangerous-contexts" title="Permanent link">&para;</a></h3>
@@ -4625,7 +4737,7 @@ This is a <strong>Safe Sink</strong> and will automatically CSS encode data in i
 <span class="cm">&lt;!-- Inside an HTML comment --&gt;</span>
 <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="nt">Directly</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">CSS</span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">ToDefineAnAttribute</span><span class="o">=</span><span class="s">test</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nt">ToDefineATag</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/test&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">ToDefineATag</span> <span class="na">href</span><span class="o">=</span><span class="s">"/test"</span> <span class="p">/&gt;</span>
 </code></pre></div>
 <p>Other areas to be careful with include:</p>
 <ul>
@@ -4827,7 +4939,7 @@ Encoding Mechanism: CSS encoding supports both <code>\XX</code> and <code>\XXXXX
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
